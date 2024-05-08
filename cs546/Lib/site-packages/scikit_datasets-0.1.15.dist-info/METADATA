@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: scikit-datasets
+Version: 0.1.15
+Summary: Scikit-learn-compatible datasets
+Home-page: https://github.com/daviddiazvico/scikit-datasets
+Author: David Diaz Vico
+Author-email: david.diaz.vico@outlook.com
+License: UNKNOWN
+Download-URL: https://github.com/daviddiazvico/scikit-datasets/archive/v0.1.15.tar.gz
+Keywords: scikit-learn,pandas
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: cran
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Provides-Extra: cran
+Requires-Dist: rdata; extra == 'cran'
+
+UNKNOWN
+
+
