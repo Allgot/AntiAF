@@ -175,7 +175,7 @@ if __name__ == '__main__':
     k_folds = 10
     # path to folder that contains flows .csv
     csv_path = "output/"
-    csv_path_def = "output_0.60/"
+    csv_path_def = "output_0.15/"
     # Output filename prefix (ie. reduced_padding)
     output_filename_prefix = "def"
     # flow timeout value
