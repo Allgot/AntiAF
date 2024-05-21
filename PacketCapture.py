@@ -1,4 +1,4 @@
-# author: EManuele/Immanuel
+# author: EManuele/Immanuel, JLee/Allgot
 
 import SimplePacket
 import pandas
@@ -70,3 +70,28 @@ class PacketCapture:
             return self.streams[self.streamslist[stream_number]]
         else:
             print("Error, invalid stream number.")
+    
+    # Returns a time interval when packets related to the given IP address are exchanged
+    def getinterval(self, target_ip):
+        init_t = float("inf")
+        last_t = -1
+
+        for packet in self.Packets:
+            if (target_ip == packet.ipSrc) or (target_ip == packet.ipDst):
+                cur_t = packet.timestamp
+                if init_t > cur_t:
+                    init_t = cur_t
+                
+                if last_t < cur_t:
+                    last_t = cur_t
+        
+        return (init_t, last_t)
+    
+    # Returns a MAC address according to the IP address
+    def getmacaddrbyIP(self, target_ip):
+        for packet in self.Packets:
+            if (target_ip == packet.ipSrc):
+                return packet.macSrc
+            elif (target_ip == packet.ipDst):
+                return packet.macDst
+        return None

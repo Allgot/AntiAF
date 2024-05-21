@@ -1,4 +1,4 @@
-# author: EManuele/Immanuel
+# author: EManuele/Immanuel, JLee/Allgot
 
 import requests
 import requests.exceptions
@@ -10,7 +10,7 @@ import pickle
 logging.getLogger("requests").setLevel(logging.ERROR)
 logging.getLogger("urllib3").setLevel(logging.ERROR)
 logging.basicConfig(level=logging.INFO)
-TOR_NODES_LIST_URL = "https://web.archive.org/web/20190604163945/https://www.dan.me.uk/tornodes"
+TOR_NODES_LIST_URL = "https://web.archive.org/web/20180917035310/https://www.dan.me.uk/tornodes"
 
 
 class NodeGuard:

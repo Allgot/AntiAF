@@ -1,4 +1,4 @@
-# author: EManuele/Immanuel
+# author: EManuele/Immanuel, JLee/Allgot
 
 from scapy.all import *
 import re
@@ -14,9 +14,11 @@ class SimplePacket:
         URG = 0x20
         ECE = 0x40
         CRW = 0x80
-        if(pkt.haslayer(IP) and pkt.haslayer(TCP)):
+        if(pkt.haslayer(IP) and pkt.haslayer(TCP) and pkt.haslayer(Ether)):
             self.ipSrc = pkt[IP].src
             self.ipDst = pkt[IP].dst
+            self.macSrc = pkt[Ether].src
+            self.macDst = pkt[Ether].dst
             self.srcPort = pkt[TCP].sport
             self.dstPort = pkt[TCP].dport
             self.len = pkt[IP].len

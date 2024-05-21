@@ -1,4 +1,4 @@
-#!c:\users\vik\desktop\dev\onion\cs546\scripts\python.exe
+#!C:\Users\Vik\Desktop\dev\onion\cs546\Scripts\python.exe
 # See http://cens.ioc.ee/projects/f2py2e/
 from __future__ import division, print_function
 
