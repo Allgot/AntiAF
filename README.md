@@ -1,21 +1,25 @@
 # Mitigating Enhanced Application Fingerprinting on Tor: A Preliminary Study
-Proof of Concept to mitigate application fingerprinting (AF) on Tor.
+A proof of concept to: i) enhance application fingerprinting performance, and ii) mitigate application fingerprinting on Tor.
 
-## How to test the baseline performance and the mitigation performance
+## How to Test the Baseline and Improved Performance
 #### 1. Requirements
-  * Python 3.6.7.
-  * Python Libraries: see `requirements.txt` file.
+  * Python 3.6.7
+  * Python libraries specified in the `requirements.txt` file
 
-#### 2. Get the baseline performance
-Run the script `run_ml.py` and `run_dnn.py`. 
-The results would be printed in multiple .csv files and one .pdf file.
+#### 2. Obtain Baseline and Improved Performance
+Run the scripts `run_ml.py` (baseline and the XGBoost-based approach), `run_grid.py` (the hyperparameter tuning-based approach), and `run_dnn.py` (the DNN-based approach).
+The results will be saved in multiple CSV and PDF files.
 
-#### 3. Get the mitigation performance
-Run the script `run_ml_def.py`. 
-The results would be printed in multiple .csv files and one .pdf file. 
-You can specify different `csv_path_def` to see how mitigation effectiveness changes.
+## How to Test the Mitigation Performance
+#### 1. Requirements
+  * Same as above
+
+#### 2. Obtain Mitigation Performance
+Run the script `run_ml_def.py`.
+The results will be saved in multiple CSV and PDF files.
+You can specify different `csv_path_def` values to observe how mitigation effectiveness changes based on the ratio of random packets.
 
 ## Acknowledgment
-Original dataset and code are part of the work "Peel the onion: Recognition of Android apps behind the Tor Network", 15th International Conference on Information Security Practice and Experience (ISPEC2019). 
+The original dataset and code are part of the work "Peel the Onion: Recognition of Android Apps Behind the Tor Network," presented at the 15th International Conference on Information Security Practice and Experience (ISPEC2019).
 
-We have added and modified few scripts.
+We have added and modified a few scripts.
